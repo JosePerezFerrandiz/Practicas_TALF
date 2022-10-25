@@ -1,0 +1,19 @@
+\documentclass{article}
+\usepackage[utf8]{inputenc}
+\usepackage{ragged2e}
+
+\title{Practica1.B}
+\author{José Pérez Ferrándiz}
+\date{Octubre 2022}
+
+\begin{document}
+
+\maketitle
+\section{Ejercicio 2}
+Consideremos $L=\{w\in \{a,b\}^* : w \textnormal{ no termina en } ab\}$. Un expresión regular que genera L es: \\
+
+\begin{centra}
+$G=\{(A,B,C),(a,b),($\ A \to \ aA | bA| aB |bC , \ B \to \ b|a , \ C \to \ A)$, A\}$
+\end{centra}
+
+\end{document}
