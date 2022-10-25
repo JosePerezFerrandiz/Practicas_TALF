@@ -1,0 +1,71 @@
+\documentclass{article}
+\usepackage[utf8]{inputenc}
+\usepackage{graphicx}
+
+\title{Practica 2}
+\author{José Pérez Ferrándiz}
+\date{Octubre 2022}
+
+\begin{document}
+
+\maketitle
+
+\section{Ejercicio 1}
+
+Considerando un automata sobre el lenguaje \{a,b\} que solo contiene cadenas de a, su automata seria de la siguiente manera:\\
+
+$M=(\{q_0,q_1,q_2\}, \{a,b\}, \delta, q_0, \{q_1\})$\\
+
+\begin{table}[h!]
+\begin{tabular}{c|c|c}
+  $\delta(q,\sigma)$ & $a$ & $b$\\
+  \hline
+  $q_0$& $q_1$ & $q_2$\\
+  \hline
+  $q_1$& $q_1$ & $q_2$\\
+  \hline
+  $q_2$& $q_2$ & $q_2$
+\end{tabular}
+\end{table}
+
+Estos son algunos ejemplos de cadenas que son aceptadas por el automata:
+
+\begin{table}[h!]
+\begin{tabular}{c|c}
+  $Cadenas$ & $Estado$\\
+  \hline
+  $aaaa& $aceptada$\\
+  \hline
+  $aaabaaa$ & $Rechazada$\\
+  \hline
+  $\epsilon$ & $Rechazada$\\
+  \hline
+  $a$ & $Aceptada$\\
+  \hline
+  $bbbba$ & $Rechazada$\\
+  \hline
+  $b$ & $Rechazada$\\
+
+\end{tabular}
+\end{table}
+
+El JSON de un automata se escribe en un entorno verbatim y el de este automata es:
+
+\begin{verbatim}
+      "K" : ["q0", "q1", "q2"],
+      "A" : ["a", "b"],
+      "s" : "q0",
+      "F" : ["q1"],
+      "t" : [["q0", "a", "q1"],
+             ["q0", "b", "q2"],
+             ["q1", "a", "q1"],
+             ["q1", "b", "q2"],
+             ["q2", "a", "q2"],
+             ["q2", "b", "q2"]]
+\end{verbatim}
+
+El diagrama del automata es el siguiente:
+
+\includegraphics[width=8cm, height=5cm]{Ejercicio1_a.png}
+
+\end{document}
