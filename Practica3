@@ -1,0 +1,54 @@
+\documentclass{article}
+\usepackage[utf8]{inputenc}
+\usepackage{graphicx}
+\usepackage{listings}
+\usepackage{suffix}
+\usepackage[onelanguage, linesnumbered, noline, resetcount]{algorithm2e}
+
+\title{Practica 1.A}
+\author{José Pérez Ferrándiz}
+\date{Octubre 2022}
+
+\begin{document}
+
+\maketitle
+
+\section{Ejercicio 1}
+
+La maquina de Turing es:
+
+\includegraphics[width=8cm, height=6cm]{MT.png}
+
+Algunos ejemplos por ejemplo serian:
+
+Para la cadena $\code{*}\code{|}\code{|}\code{*}\code{|}\code{*}$ : la salida aportada por la MT es: $\code{*}\code{*}\code{*}\code{|}\code{|}\code{*}$
+
+\section{Ejercicio 2}
+La funcion recursiva que suma tres valores es 
+\ll \rec{\pi^1_1}\code{|}{\sigma(\pi^3_3)}>\code{|}{\sigma(\pi^4_4)>}
+
+Algunos ejemlos de ejecución en octave son:\\
+\includegraphics[width=8cm, height=6cm]{Ejecucion1.png}
+\includegraphics[width=8cm, height=6cm]{Ejecucuion2.png}\\
+Para la entrada 4,2,1 el resultado es 7 y para 5,2,1 el resultado es 8.
+
+
+
+\section{Ejercicio 3}
+
+\begin{whilecode}
+\newcommand $(X_1= \Asig X_1 + X_2$\;
+
+ \While{$(X_1) \not = 0$}{
+
+  \newcommand $(X_1= \Assig X_1 - 1$\;  \hfill \break
+  \newcommand $(X_3= \Assig X_3 + 1$\;
+
+ }
+
+\end{whilecode}
+
+Primero se suman dos valores como x1 y x2, y se asignan a la variable x1. 
+Una vez dentro del bucle while mientras que esa suma sea distinto de 0 se sumara un uno a x3 y se restara un uno a x1, asi que cuando pare el bucle en x3 quede guardado el valor de la suma.
+
+\end{document}
