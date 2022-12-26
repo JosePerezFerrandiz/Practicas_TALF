@@ -1,0 +1,72 @@
+\documentclass{article}
+\usepackage[utf8]{inputenc}
+\usepackage{graphicx}
+\usepackage{listings}
+\usepackage{suffix}
+\usepackage[onelanguage, linesnumbered, noline, resetcount]{algorithm2e}
+\usepackage{verbatim}
+
+\title{Practica 4}
+\author{José Pérez Ferrándiz}
+\date{Diciembre 2022}
+
+\begin{document}
+
+\maketitle
+
+\section{Ejercicio 1}
+
+El codigo while más corto en divergir es:\\
+
+\begin{whilecode}
+ $Q=(0,s)\\
+ \\
+      X_1 \Assig =X_1 + 1$\;\\
+     \While{$X_1 \not = 0$}{
+      $X_1 \Assig =X_1$
+             }
+\end{whilecode}
+
+Su codificacion en Octave es:\\
+\includegraphics[width=14cm, height=2cm]{Ejecucuion3.png}
+
+\section{Ejercicio 2}
+
+Necesitamos un programa que lea los N primeros vectores, por lo que necesitamos un bucle que imprima los vectores.\\
+Necesitamos establecer una biyeccion entre 
+$\mathbb{N}$
+y todos los vectores.
+
+Es decir: 
+\begin{verbatim}
+
+    Funcion printNvectors(N)
+
+    for i=0:N-1
+        disp(['(' num2str(godeldecoding(i)) ')'])
+    end
+    
+    end
+    \end{verbatim}
+    
+Un ejemplo de ejecucion seria el siguiente:\\
+
+\includegraphics[width=12cm, height=6cm]{ejec3.png}
+
+\section{Ejercicio 3}
+Para mostrar los codigos while es muy parecido:\\
+\begin{verbatim}
+
+Funcion printNwhilePrograms(N)
+
+for i=0:N-1
+disp(N2WHILE(i))
+end
+end
+\end{verbatim}
+
+Un ejemplo de ejecucuion es:\\
+\includegraphics[width=14cm, height=6cm]{Ejecucuion4.png}
+
+
+\end{document}
